@@ -1,0 +1,66 @@
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #FF8533;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+p {
+  font-family: 'Merriweather', serif;
+}
+
+.header {
+  background-color: #FFE066;
+  height: 140px;
+  border-bottom: 3px solid #ddd;
+  text-align: center;
+}
+
+.meal-plan {
+  height: 200px;
+  width: 1427px;
+  padding-left: 18px;
+
+  margin: 0px auto;
+}
+
+.meal-plan .meal-plan-selection {
+  height: 180px;
+  width: 180px;
+  margin-right: 18px;
+  margin-top: 10px;
+  float: left;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  text-align: center;
+
+  background-color: #fff;
+  border: 2px solid #00CE77;
+}
+
+.meal-plan .meal-plan-selection-inner {
+  height: 160px;
+  width: 160px;
+
+  margin-top: 9px;
+  margin-left: 9px;
+
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+
+  border: 1px solid #ddd;
+}
+
+.meal-plan .meal-plan-selection .meal-plan-selection-text {
+  height: 160px;
+  line-height: 160px;
+
+  font-family: 'Merriweather', serif;
+  color: #aaa;
+}
