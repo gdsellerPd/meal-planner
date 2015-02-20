@@ -1,0 +1,32 @@
+.meal-options {
+  margin-top : 110px;
+  padding    : 20px;
+}
+
+  .meal-options-header {
+    color         : $darkBlue;
+    font-family   : $lato-font;
+    font-weight   : 700;
+    font-size     : 32px;
+    margin-bottom : 10px;
+  }
+
+  .meal-options-filter-input {
+    height: 40px;
+    width: 400px;
+
+    font-family: $merriweather-font;
+    color: $darkGrey;
+    font-size: 18px;
+
+    outline-width: 1px;
+    outline-color: $darkBlue;
+  }
+
+
+  .meal-options-filter-input::-webkit-input-placeholder,
+  .meal-options-filter-input:-moz-placeholder,
+  .meal-options-filter-input::-moz-placeholder,
+  .meal-options-filter-input:-ms-input-placeholder {
+   color: $veryLightGrey;
+  }

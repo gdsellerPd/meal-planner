@@ -1,3 +1,5 @@
+$meal-plan-selection-inner-size: 120px;
+
 .meal-plan {
   height     : 100px;
   width      : 1400px;
@@ -28,11 +30,11 @@
     }
 
     .meal-plan-selection-inner {
-      height                : 140px;
-      width                 : 140px;
+      height                : $meal-plan-selection-inner-size;
+      width                 : $meal-plan-selection-inner-size;
 
-      margin-top            : 4px;
-      margin-left           : 4px;
+      margin-top            : 14px;
+      margin-left           : 14px;
 
       -moz-border-radius    : 70px;
       -webkit-border-radius : 70px;
@@ -41,8 +43,8 @@
     }
 
     .meal-plan-selection-text {
-      height      : 140px;
-      line-height : 140px;
+      height      : $meal-plan-selection-inner-size;
+      line-height : $meal-plan-selection-inner-size;
 
       font-family : $merriweather-font;
       color       : $medGrey;
