@@ -1,0 +1,56 @@
+.meal-plan {
+  height     : 100px;
+  width      : 1400px;
+
+  margin     : 0px auto;
+  margin-top : -100px;
+}
+
+  .meal-plan-selection {
+    height     : 200px;
+    width      : 200px;
+    float      : left;
+    text-align : center;
+  }
+
+    .meal-plan-selection-outer {
+      height                : 150px;
+      width                 : 150px;
+
+      margin-top            : 25px;
+      margin-left           : 25px;
+
+      -moz-border-radius    : 75px;
+      -webkit-border-radius : 75px;
+
+      background-color      : $white;
+      border                : 2px solid $green;
+    }
+
+    .meal-plan-selection-inner {
+      height                : 140px;
+      width                 : 140px;
+
+      margin-top            : 4px;
+      margin-left           : 4px;
+
+      -moz-border-radius    : 70px;
+      -webkit-border-radius : 70px;
+
+      border                : 1px solid $lightGrey;
+    }
+
+    .meal-plan-selection-text {
+      height      : 140px;
+      line-height : 140px;
+
+      font-family : $merriweather-font;
+      color       : $medGrey;
+    }
+
+    .meal-plan-selection-action-text {
+      font-size   : 10px;
+      font-family : $merriweather-font;
+      color       : $lightGrey;
+      line-height : 30px;
+    }

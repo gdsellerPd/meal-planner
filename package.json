@@ -7,7 +7,7 @@
     "flux": "^2.0.1",
     "lodash": "^3.2.0",
     "object-assign": "^2.0.0",
-    "react": "^0.12.2"
+    "react": ">=0.13.0-beta.1"
   },
   "scripts": {
     "start": "node server.js",
@@ -17,8 +17,9 @@
     "babel-core": "^4.3.0",
     "babel-loader": "^4.0.0",
     "jsx-loader": "^0.12.2",
-    "style-loader": "^0.8.3",
     "react-hot-loader": "^1.1.5",
+    "sass-loader": "^0.4.0-beta.1",
+    "style-loader": "^0.8.3",
     "webpack": "^1.5.3",
     "webpack-dev-server": "^1.7.0"
   }
