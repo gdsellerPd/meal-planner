@@ -10,7 +10,7 @@ class MealOptionsList extends React.Component {
     }
 
     return  <div className="meal-options-list">
-            {this.props.mealOptions.map(x => <MealOptionsItem data={x} />)}
+              {this.props.mealOptions.map(x => <MealOptionsItem key={x.name} data={x} />)}
             </div>;
   }
 }
