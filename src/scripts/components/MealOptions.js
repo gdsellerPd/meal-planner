@@ -9,7 +9,7 @@ class MealOptions extends React.Component {
     return  <div className="meal-options">
               <h1 className="meal-options-header">Meal Options</h1>
               <MealOptionsFilter />
-              <MealOptionsList />
+              <MealOptionsList mealOptions={this.props.mealOptions} />
             </div>;
   }
 }
