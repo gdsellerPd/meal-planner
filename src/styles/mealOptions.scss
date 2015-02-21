@@ -8,7 +8,7 @@
 
   .meal-options-header {
     color         : $darkBlue;
-    font-family   : $lato-font;
+    font-family   : $heading-font;
     font-weight   : 700;
     font-size     : 24px;
     margin-bottom : 10px;
@@ -20,7 +20,7 @@
     width       : 400px;
     margin-left : 25px;
 
-    font-family : $merriweather-font;
+    font-family : $copy-font;
     color       : $darkGrey;
     font-size   : 18px;
 
@@ -62,7 +62,7 @@
 
   .meal-options-item-details-title {
     color           : $darkBlue;
-    font-family     : $lato-font;
+    font-family     : $heading-font;
     margin-bottom   : 0px;
     font-size       : 18px;
     text-decoration : none;
