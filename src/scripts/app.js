@@ -15,11 +15,11 @@ class App extends React.Component {
                   { name: "Thu" }, { name: "Fri" }, { name: "Sat" } ],
 
       mealOptions: [{
-        name:   'Stir-Fry Chicken with Broccoli Recipe',
+        name:   'Stir-Fry Chicken with Broccoli',
         url:    'https://www.flickr.com/photos/40726522@N02/8248039340/in/photolist-oTfPPv-8uRsLx-64BrYT-9eEsJL-oLRqJ1-3917uk-9Azmdp-dyRmJQ-goW3PH-d8Yps1-fDVUs-bokENz-4hGZ1d-Ltn5G-adVdDX-niq744-9vFzQD-5p9v7-xGMMq-iBYqih-9acLSt-5bg5wJ-dvKfRi-2dwX14-oH3RQV-opkb9s-8Mq97h-qXJxmi-729MLR-fz9WJz-6izVoh-aSDi72-dR7ADh-hs7WmW-a4am7P-oWZ74H-bsJx9H-39Cf6m-5Z6Qs9-9Bvtyr-9yQW5B-99naKQ-5xb2Kd-c6SA4-fRWuqp-bsWugr-cG7Akf-q4SExy-fpboiL-dcK6jQ',
         picUrl: 'images/StirFryChicken.jpg'
       }, {
-        name:   'Satay Chicken Recipe',
+        name:   'Satay Chicken',
         url:    'https://www.flickr.com/photos/mat-packer/9312677768',
         picUrl: 'images/ChickenSatay.jpg'
       },
@@ -37,25 +37,21 @@ class App extends React.Component {
         name:   'Maple Glazed Salmon',
         url:    'https://www.flickr.com/photos/amyselleck/4903444188/in/photolist-5HUvEt-9NUmUU-7Xv1XL-dJ235d-2oXBUX-8tir8b-5cShVz-7b185w-7mU6QJ-4p1HQZ-7mQfwB-29nab-dwJrvk-dwPXzE-27TCym-3s28FH-7ei4Re-7XBMhk-8ginLd-7Zdp45-5Tmmgh-52s75e-i5zKPa-6pKER2-8yPmmC-8deAxq-bsxW8M-4jyC1R-aEU8h1-27PhGP-3s6Cys-btC23S-7czt8X-fia5K1-jBAZy-7aqU7r-7czsHF-hJDrx3-cXnb6o-dwJsHg-6WzSUD-5JVXXU-5JRGrt-7RxME-9hh2fu-ptAxpg-6sQjk6-jBAZw-tkpXf-6jeJdE',
         picUrl: 'images/MapleGlazedSalmon.jpg'
-      }]
       },
       {
         name:   'Beef Wellington',
         url:    'https://www.flickr.com/photos/cyclonebill/5317710650',
         picUrl: 'images/BeefWellington.jpg'
-      }]
       },
       {
         name:   'New York Strip Steak',
         url:    'https://www.flickr.com/photos/stevendepolo/15408040004',
         picUrl: 'images/NewYorkStrip.jpg'
-      }]
       },
       {
         name:   'Hamburger',
         url:    'https://www.flickr.com/photos/70118259@N00/237908797/in/photolist-CPFXg-C65xM-n2kZP-9UEw15-G8cD6-GpSXC-cefuBs-C65xN-4MpGNz-6ycQ1g-4qB8zB-xuXp4-dF5256-5YKSNA-bKqfk2-65y8pY-bwWBiK-a4uoti-7AsvRt-e9VHCD-L2kxk-bt1JRd-6c7HTT-8rRDMD-8xKriN-772KU7-8CtCCB-8HBzQn-7hSkq6-9vjPos-hT91DR-Db7J7-4gRyYm-c3N4uU-8HBzFM-fFCLur-axwhP7-fvqhdC-9htU8N-3pCvgL-w2CTD-cCYVk5-ceRh1b-ea2oPj-7TX77T-6Z7pga-6QRhZL-qGXyx-nWR7te-5jumKD',
         picUrl: 'images/Hamburger.jpg'
-      }]
       },
       {
         name:   'Summer Salad',

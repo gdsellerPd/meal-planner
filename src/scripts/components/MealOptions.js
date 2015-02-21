@@ -1,14 +1,13 @@
 const React = require('react');
 
-const MealOptionsFilter = require('./MealOptionsFilter');
+const MealOptionsHeader = require('./MealOptionsHeader');
 const MealOptionsList = require('./MealOptionsList');
 
 
 class MealOptions extends React.Component {
   render() {
     return  <div className="meal-options">
-              <h1 className="meal-options-header">Meal Options</h1>
-              <MealOptionsFilter />
+              <MealOptionsHeader />
               <MealOptionsList mealOptions={this.props.mealOptions} />
             </div>;
   }

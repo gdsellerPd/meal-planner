@@ -7,18 +7,29 @@
 }
 
   .meal-options-header {
+    overflow: auto;
+    margin-bottom : 10px;
+    margin-left   : 25px;
+    margin-right   : 25px;
+  }
+
+  .meal-options-header-title {
     color         : $darkBlue;
     font-family   : $heading-font;
     font-weight   : 700;
     font-size     : 24px;
-    margin-bottom : 10px;
-    margin-left   : 25px;
+
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    float: left;
   }
 
-  .meal-options-filter-input {
+  .meal-options-header-filter-input {
     height      : 40px;
     width       : 400px;
     margin-left : 25px;
+    float: right;
 
     font-family : $copy-font;
     color       : $darkGrey;
@@ -57,7 +68,7 @@
 
   .meal-options-item-details {
     background-color : $veryLightGrey;
-    padding          : 8px 8px;
+    padding          : 15px 8px;
   }
 
   .meal-options-item-details-title {

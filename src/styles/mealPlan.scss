@@ -43,8 +43,7 @@ $meal-plan-selection-inner-size: 120px;
     }
 
     .meal-plan-selection-text {
-      height      : $meal-plan-selection-inner-size;
-      line-height : $meal-plan-selection-inner-size;
+      line-height : 30px;
 
       font-family : $copy-font;
       color       : $medGrey;
@@ -54,5 +53,7 @@ $meal-plan-selection-inner-size: 120px;
       font-size   : 10px;
       font-family : $copy-font;
       color       : $lightGrey;
-      line-height : 30px;
+
+      height      : $meal-plan-selection-inner-size;
+      line-height : $meal-plan-selection-inner-size;
     }
