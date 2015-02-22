@@ -1,23 +1,27 @@
 const React            = require('react');
-const { List, Set }    = require('immutable');
+const { List }    = require('immutable');
 const { EventEmitter } = require('events');
 
 const data = require('json!../data.json');
 
-const AppDispatcher             = require('../AppDispatcher');
-const MealOptionsConstants      = require('../constants/MealOptionsConstants');
+const AppDispatcher        = require('../AppDispatcher');
+const MealOptionsConstants = require('../constants/MealOptionsConstants');
+const MealPlanConstants    = require('../constants/MealPlanConstants');
 
 
 const CHANGE_EVENT = 'meal-options-change';
 
-const _mealTimes = List(data.mealTimes);
 const _mealOptions = List(data.mealOptions);
 let _availableOptions;
+let _lastFilterValue = "";
 
 
 function filterOptions(filterValue) {
+  _lastFilterValue = filterValue || "";
+
+  _availableOptions = List(_mealOptions);
+
   if (!filterValue || filterValue.trim() === "") {
-    _availableOptions = List(_mealOptions);
     return;
   }
 
@@ -46,10 +50,6 @@ class MealOptionsStore extends EventEmitter {
     _availableOptions = List(_mealOptions);
   }
 
-  getMealTimes() {
-    return _mealTimes;
-  }
-
   getAvailableOptions() {
     return _availableOptions;
   }
@@ -69,12 +69,12 @@ class MealOptionsStore extends EventEmitter {
 
 const _mealOptionsStore = new MealOptionsStore();
 
-AppDispatcher.register(function(action) {
+_mealOptionsStore.dispatchToken = AppDispatcher.register(function(action) {
     var change = true;
 
     switch(action.actionType) {
       case MealOptionsConstants.MEAL_OPTIONS_FILTER_CHANGED:
-          filterOptions(action.value);
+        filterOptions(action.value);
         break;
 
       default:

@@ -3,6 +3,7 @@ require('../styles/app.scss');
 const React = require('react');
 
 const MealOptionsStore = require('./stores/MealOptionsStore');
+const MealPlanStore = require('./stores/MealPlanStore');
 
 const Header      = require('./components/Header');
 const MealPlan    = require('./components/MealPlan');
@@ -10,7 +11,7 @@ const MealOptions = require('./components/MealOptions');
 
 function getMealPlannerState() {
   return {
-    mealTimes   : MealOptionsStore.getMealTimes(),
+    mealPlan    : MealPlanStore.getMealPlan(),
     mealOptions : MealOptionsStore.getAvailableOptions()
   };
 }
@@ -25,13 +26,20 @@ class App extends React.Component {
   render() {
     return  <div className="main">
               <Header title={this.props.title} />
-              <MealPlan mealTimes={this.state.mealTimes} />
+              <MealPlan data={this.state.mealPlan} />
               <MealOptions mealOptions={this.state.mealOptions} />
             </div>;
   }
 
   componentWillMount() {
     MealOptionsStore.addChangeListener(this._onChange.bind(this));
+    MealPlanStore.addChangeListener(this._onChange.bind(this));
+  }
+
+  componentDidMount() {
+    const MealActionCreator = require('./actions/MealPlanActionCreator');
+    const firstPlanKey = this.state.mealPlan.keys().next().value;
+    MealActionCreator.mealPlanSet(firstPlanKey, this.state.mealOptions.first());
   }
 
   _onChange() {

@@ -42,11 +42,28 @@ $meal-plan-selection-inner-size: 120px;
       border                : 1px solid $lightGrey;
     }
 
+    .meal-plan-selection-inner img {
+      height                : ($meal-plan-selection-inner-size - 1);
+      width                 : ($meal-plan-selection-inner-size - 1);
+
+      -moz-border-radius    : 70px;
+      -webkit-border-radius : 70px;
+
+      border                : 1px solid $lightGrey;
+    }
+
     .meal-plan-selection-text {
       line-height : 30px;
 
       font-family : $copy-font;
       color       : $medGrey;
+    }
+
+    .meal-plan-selection-name {
+      font-family : $heading-font;
+      color       : $orange;
+
+      font-size: 12px;
     }
 
     .meal-plan-selection-action-text {
