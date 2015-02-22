@@ -1,4 +1,5 @@
 const React = require('react');
+const { List } = require('immutable');
 
 const MealPlanSelection = require('./MealPlanSelection');
 
@@ -10,10 +11,10 @@ class MealPlan extends React.Component {
 
     const mealSelections = this.props.data;
 
-    var selections = [];
+    let selections = List();
     for (let mt of mealSelections.keys()) {
       let selection = mealSelections.get(mt);
-      selections.push(<MealPlanSelection key={mt} reactKey={mt} mealPlan={selection} />);
+      selections = selections.push(<MealPlanSelection key={mt} reactKey={mt} mealPlan={selection} />);
     }
 
     return  <div className="meal-plan">

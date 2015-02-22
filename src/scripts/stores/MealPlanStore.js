@@ -45,7 +45,7 @@ class MealPlanStore extends EventEmitter {
 const _mealPlanStore = new MealPlanStore();
 
 _mealPlanStore.dispatchToken = AppDispatcher.register(function(action) {
-    var change = true;
+    let change = true;
 
     switch(action.actionType) {
 

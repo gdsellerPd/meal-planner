@@ -70,7 +70,7 @@ class MealOptionsStore extends EventEmitter {
 const _mealOptionsStore = new MealOptionsStore();
 
 _mealOptionsStore.dispatchToken = AppDispatcher.register(function(action) {
-    var change = true;
+    let change = true;
 
     switch(action.actionType) {
       case MealOptionsConstants.MEAL_OPTIONS_FILTER_CHANGED:
