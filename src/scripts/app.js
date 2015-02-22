@@ -8,14 +8,18 @@ const Header      = require('./components/Header');
 const MealPlan    = require('./components/MealPlan');
 const MealOptions = require('./components/MealOptions');
 
+function getMealPlannerState() {
+  return {
+    mealTimes   : MealOptionsStore.getMealTimes(),
+    mealOptions : MealOptionsStore.getAvailableOptions()
+  };
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      mealTimes   : MealOptionsStore.getMealTimes(),
-      mealOptions : MealOptionsStore.getAvailableOptions()
-    };
+    this.state = getMealPlannerState();
   }
 
   render() {
@@ -24,6 +28,14 @@ class App extends React.Component {
               <MealPlan mealTimes={this.state.mealTimes} />
               <MealOptions mealOptions={this.state.mealOptions} />
             </div>;
+  }
+
+  componentWillMount() {
+    MealOptionsStore.addChangeListener(this._onChange.bind(this));
+  }
+
+  _onChange() {
+    this.setState(getMealPlannerState());
   }
 }
 

@@ -1,5 +1,5 @@
 const React            = require('react');
-const { List }         = require('immutable');
+const { List, Set }    = require('immutable');
 const { EventEmitter } = require('events');
 
 const data = require('json!../data.json');
@@ -16,7 +16,25 @@ let _availableOptions;
 
 
 function filterOptions(filterValue) {
-  _availableOptions = _mealOptions.filter(x => { return x.name.indexOf(filterValue) === 0; });
+  if (!filterValue || filterValue.trim() === "") {
+    _availableOptions = List(_mealOptions);
+    return;
+  }
+
+  const searchByRegex = new RegExp(filterValue, 'i');
+
+  const byName = _mealOptions.filter(m => {
+    return m.name.match(searchByRegex);
+  });
+
+  const byTag = _mealOptions
+    .filter(m => {
+      return m.tags
+              .map(tag => { return tag.match(searchByRegex); })
+              .reduce((prev, cur) => { return prev || cur; })
+    });
+
+  _availableOptions = Set(List(byName).concat(byTag));
 }
 
 
