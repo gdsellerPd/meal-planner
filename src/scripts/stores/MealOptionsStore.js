@@ -29,12 +29,14 @@ function filterOptions(filterValue) {
 
   const byTag = _mealOptions
     .filter(m => {
+      if (byName.find(x => x === m)) {return false;}
+
       return m.tags
               .map(tag => { return tag.match(searchByRegex); })
               .reduce((prev, cur) => { return prev || cur; })
     });
 
-  _availableOptions = Set(List(byName).concat(byTag));
+  _availableOptions = List(byName).concat(byTag);
 }
 
 
