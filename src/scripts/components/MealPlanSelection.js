@@ -1,11 +1,13 @@
 const React = require('react');
 
+const MealPlanActionCreator = require('../actions/MealPlanActionCreator');
+
 class MealPlanSelection extends React.Component {
   render() {
 
     let inner;
     if (this.props.mealPlan) {
-      inner = <img src={this.props.mealPlan.picUrl} />;
+      inner = <img className="meal-plan-selection-image" src={this.props.mealPlan.picUrl} onClick={this._onRemove.bind(this)} />;
     } else {
       inner = <span className="meal-plan-selection-action-text">drag here</span>;
     }
@@ -31,6 +33,10 @@ class MealPlanSelection extends React.Component {
       </div>
 
     </div>;
+  }
+
+  _onRemove() {
+    MealPlanActionCreator.mealPlanDelete(this.props.reactKey, this.props.mealPlan);
   }
 }
 

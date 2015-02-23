@@ -53,6 +53,10 @@ _mealPlanStore.dispatchToken = AppDispatcher.register(function(action) {
         _mealPlan = _mealPlan.set(action.value.mealTime, action.value.mealOption);
         break;
 
+      case MealPlanConstants.MEAL_PLAN_MEAL_REMOVED:
+        _mealPlan = _mealPlan.set(action.value.mealTime, null);
+        break;
+
       default:
         change = false;
         break;

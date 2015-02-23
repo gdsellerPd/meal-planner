@@ -9,6 +9,13 @@ class MealPlanActionCreator {
       value: {mealTime, mealOption}
     });
   }
+
+  mealPlanDelete(mealTime, mealOption) {
+    AppDispatcher.dispatch({
+      actionType: MealPlanConstants.MEAL_PLAN_MEAL_REMOVED,
+      value: {mealTime, mealOption}
+    });
+  }
 }
 
 

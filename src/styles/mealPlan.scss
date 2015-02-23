@@ -74,3 +74,7 @@ $meal-plan-selection-inner-size: 120px;
       height      : $meal-plan-selection-inner-size;
       line-height : $meal-plan-selection-inner-size;
     }
+
+    .meal-plan-selection-image {
+      cursor: pointer;
+    }
