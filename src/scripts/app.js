@@ -37,9 +37,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    const MealPlanActionCreator = require('./actions/MealPlanActionCreator');
-    const firstPlanKey = this.state.mealPlan.keys().next().value;
-    MealPlanActionCreator.mealPlanSet(firstPlanKey, this.state.mealOptions.skip(2).first());
   }
 
   _onChange() {
