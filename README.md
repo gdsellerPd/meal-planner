@@ -47,6 +47,6 @@ Open your browser to [http://localhost:3000/](http://localhost:3000/)
 
     $ webpack
 
-###Testinging it
+###Testing it
 
 [N/A]
