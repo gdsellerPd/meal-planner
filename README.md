@@ -1,6 +1,8 @@
 Meal Planner
 ============
 
+![alt tag](https://raw.github.com/jasich/meal-planner/master/screenshots/screenshot.png)
+
 This is an example application to show off a modern web app that uses:
 
   * [React](http://facebook.github.io/react/) - UI Framework
