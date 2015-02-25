@@ -23,7 +23,7 @@ var MealPlanSelection = React.createClass({
   render() {
     let inner;
     if (this.props.mealPlan) {
-      inner = <img className="meal-plan-selection-image" src={this.props.mealPlan.picUrl} onClick={this._onRemove} />;
+      inner = <img className="meal-plan-selection-image" title="click to remove" src={this.props.mealPlan.picUrl} onClick={this._onRemove} />;
     } else {
       inner = <span className="meal-plan-selection-action-text">drag here</span>;
     }
@@ -33,10 +33,14 @@ var MealPlanSelection = React.createClass({
       console.log('such hovering');
     }
 
-    return <div {...this.dropTargetFor(MealOptionsConstants.MEAL_OPTIONS_MEAL_TYPE)}
-              className="meal-plan-selection">
+    var outerClasses = "meal-plan-selection-outer";
+    outerClasses += dropState.isHovering ? ' hovering' : '';
+    outerClasses += this.props.mealPlan ? ' removal' : '';
 
-            <div className="meal-plan-selection-outer">
+    return <div {...this.dropTargetFor(MealOptionsConstants.MEAL_OPTIONS_MEAL_TYPE)}
+              className='meal-plan-selection'>
+
+            <div className={outerClasses}>
               <div className="meal-plan-selection-inner">
                 {inner}
               </div>

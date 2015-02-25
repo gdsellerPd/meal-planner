@@ -29,6 +29,14 @@ $meal-plan-selection-inner-size: 120px;
       border                : 2px solid $green;
     }
 
+    .meal-plan-selection-outer.hovering {
+      background-color: $green;
+    }
+
+    .meal-plan-selection-outer.removal:hover {
+      background-color: $orange;
+    }
+
     .meal-plan-selection-inner {
       height                : $meal-plan-selection-inner-size;
       width                 : $meal-plan-selection-inner-size;
@@ -39,6 +47,7 @@ $meal-plan-selection-inner-size: 120px;
       -moz-border-radius    : 70px;
       -webkit-border-radius : 70px;
 
+      background-color      : $white;
       border                : 1px solid $lightGrey;
     }
 
