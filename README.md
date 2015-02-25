@@ -18,21 +18,22 @@ This is an example application to show off a modern web app that uses:
 
   * Existing [node.js](http://nodejs.org/) development environment
   * Webpack Command Line Interface
-
-
+    ```
     $ npm install webpack -g
+    ```
 
   * Source code
-
-
+    ```
     $ git clone git@github.com:jasich/meal-planner.git
+    ```
 
   * Installed Dependencies
     *  You may get some errors/warnings
 
-
+    ```
     $ cd meal-planner
     $ npm install
+    ```
 
 ###Running it
 
